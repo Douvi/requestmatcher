@@ -208,6 +208,10 @@ public abstract class RequestMatcherRule implements TestRule {
         return addResponse(mockResponse);
     }
 
+    public int getReuqestMatcherListSize() {
+        return dispatcher.size();
+    }
+
     /**
      * Adds a fixture to be used during the test case.
      *
