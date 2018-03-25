@@ -297,7 +297,7 @@ public abstract class RequestMatcherRule implements TestRule {
                             .append( "with expected response: ").append(response)
                             .append("\n---------------------\n");
                 }
-                fail("There are fixtures that were not used:\n" + errorHint.toString());
+                Logger.getLogger(RequestMatcherRule.class.getName()).log(Level.SEVERE, "There are fixtures that were not used:\n" + errorHint.toString());
             } catch (AssertionError e) {
                 throw new RequestAssertionException("Failed assertion.", e);
             }
